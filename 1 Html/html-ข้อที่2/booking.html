@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <style>
+        .template{
+            background-color: skyblue;
+            border: solid 2px black;
+            padding: 20px;
+            padding-top: 0px;
+            width: 400px;
+        }
+        .from{
+            margin: 0px;
+        }
+        .Container-2{
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+        .Container-4{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+        h3{
+            text-align: center;
+            padding: 0px;
+            margin-bottom: 0px;
+        }
+        .button{
+            margin-top: 10px;
+            background-color: orange;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="template">
+    <from class="from">
+        <h3>Booking</h3>
+
+        <div class="Container-2">
+        
+            <div class="item">
+                <p> Flying form</p>
+                <select id="origin" name="origin">
+                    <option value="Bangkok">Bangkok, Thailand</option>
+                    <option value="Chiangmai">Chiangmai, Thailand</option>
+                    <option value="Phuket">Phuket, Thailand</option>
+                    <option value="Tokyo">Tokyo, Japan</option>
+                </select>
+            </div>
+            <div class="item">
+                <p> To </p>
+                <select id="origin" name="origin">
+                    <option value="Bangkok">Bangkok, Thailand</option>
+                    <option value="Chiangmai">Chiangmai, Thailand</option>
+                    <option value="Phuket">Phuket, Thailand</option>
+                    <option value="Tokyo">Tokyo, Japan</option>
+                </select>
+            </div>
+            <div class="item">
+                <p> Departing </p>
+                <input type="date" id="departDate" name="departDate">
+           
+            </div>
+            <div class="item">
+                <p> Returning </p>
+                <input type="date" id="returnDate" name="returnDate">
+            </div>
+            
+        </div>
+
+        <div class="Container-4">
+            <div class="item">
+                <p>Adult</p>
+                <input type="number" id="Adult" name="Adult" min="1" max="10" value="1">
+            </div>
+            <div class="item">
+                <p>Child</p>
+                <input type="number" id="Child" name="Child" min="0" max="10" value="0">
+            </div>
+            <div class="item">
+                <p>Infant</p>
+                <input type="number" id="Infant" name="Infant" min="0" max="10" value="0">
+            </div>
+            <div class="item">
+                <p style="color: red;">Currency</p>
+                <select id="currency" name="currency" value="THB" >
+                    <option value:="THB">THB</option>
+                    <option value:="USD">USD</option>
+                    <option value:="EUR">EUR</option>
+                    <option value:="JPY">JPY</option>
+                </select> 
+            </div>
+        </div>
+
+        <button class="button">SEARCH</button>
+    </from>
+</div>
+</body>
+</html>

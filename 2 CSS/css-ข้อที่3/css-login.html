@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook clone</title>
+    <style>
+    * {
+        box-sizing: border-box;
+        margin: auto;
+        padding: 0;
+    }
+    .container {
+        height: 80%;
+        width: 100vw;
+        padding-top: 5%;
+        
+        background-color: rgb(237, 240, 245);
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .name-container {
+        flex-grow: 1;
+        flex-shrink: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 40px;
+        padding-right: 65px;
+    }
+    .name-container h1 {
+        font-size: 70px;  
+        color: #1877f2;
+        display: block;
+        text-align: left;
+        
+    }
+    .name-container p {
+        font-size: 28px;
+        display: block;
+        width: 280px;
+        text-align: left;
+    }
+    .login-form {
+        flex-grow: 1;
+        flex-shrink: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        
+    }
+    .login{   
+        padding: 50px;
+        text-align: center;
+        margin: 10px;
+    }
+    .form-login {
+        background-color: white;
+        padding: 10px 15px 24px 15px;
+        border-radius: 10px;
+        box-shadow: 2px 1px 10px gray;
+        width: 400px;
+        height: 360px;
+    }
+    form input{
+        width: 100%;
+        font-size: 19px;
+        padding: 14px;
+        margin: 6px 0 6px 0;
+        border: 1.5px solid rgb(218, 218, 218);
+        border-radius: 6px;
+    }
+    div button{
+        width: 100%;
+        font-size: 22px;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        margin: 10px 0 6px 0;
+        border: 1.5px solid rgb(255, 255, 255);
+        border-radius: 6px;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+    }
+    form a , p a {
+        display: inline-block;
+        font-size: 16px;
+        color: rgb(109, 96, 22);
+        text-decoration: none;
+    }
+
+
+    @media (max-width: 600px) {
+        html{
+            margin:0;
+        }
+        .container {
+            flex-direction: column;
+        }
+        .name-container {
+            align-items: center;
+            justify-content: center;
+            padding: 0px;
+        }
+        .name-container h1 {
+            text-align: center;
+            padding: 0px;
+        }
+        .name-container p {
+            text-align: center;
+            padding: 0px;
+        }
+    }
+
+    .footer {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer li {
+        display: inline-block;
+        
+    }
+    .footer a {
+        display: block;
+        color: rgb(112, 112, 112);
+        text-align: center;
+        font-size: 14px;
+        padding-right: 10px;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="name-container">
+            <h1 class="font-effect-fire">Facebook</h1>
+            <p>Metaverse </p>
+        </div>
+    
+        <div class="login-form">
+            <div class="login">
+                <div class="form-login">
+                    <form>
+                        <input type="text" id="Username" name="Username" placeholder="Username">
+                        <input type="password" id="Password" name="Password" placeholder="Password">
+                        <button style="background-color: #1877f2;">Log In</button>
+                        <a href="#" style="padding: 20px;">Forgotten password?</a>
+                    </form>
+                    <hr>
+                    <button style="background-color: #42b72a;">Create New Account</button>
+                </div>
+                <br>
+                <p><a href="#"><b>Create a Page</b></a> for a celebrity, brand or business.</p>
+            </div>
+         
+        </div>
+    </div>
+
+    <div class="footer">
+        <ul>
+            <li><a href="#"><b>ภาษาไทย</b></a></li>
+            <li><a href="#">English (UK)</a></li>
+        </ul>
+
+        <br>
+        <hr>
+        <br>
+
+        <ul>
+            <li><a href="#">สมัคร</a></li>
+            <li><a href="#">เข้าสู่ระบบ</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
