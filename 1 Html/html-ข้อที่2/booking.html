@@ -6,99 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
     <style>
-        .template{
-            background-color: skyblue;
-            border: solid 2px black;
-            padding: 20px;
-            padding-top: 0px;
+        div {
+            background-color: whitesmoke;
             width: 400px;
+            border: 2px solid black;
         }
-        .from{
-            margin: 0px;
+
+        table, td {
+            border: none;
+            border-collapse: collapse;
+            margin: 10px;
+            padding: 5px 10px;
         }
-        .Container-2{
-            display: grid;
-            grid-template-columns: auto auto;
-        }
-        .Container-4{
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-        }
-        h3{
+        h2 {
+            font-size: large;
+            padding-bottom: 20px;
             text-align: center;
-            padding: 0px;
-            margin-bottom: 0px;
         }
         .button{
             margin-top: 10px;
-            background-color: orange;
-            padding: 10px;
+            background-color: salmon;
+            color: white;
+            padding: 2px 10px;
         }
     </style>
 </head>
 <body>
-<div class="template">
-    <from class="from">
-        <h3>Booking</h3>
-
-        <div class="Container-2">
-        
-            <div class="item">
-                <p> Flying form</p>
-                <select id="origin" name="origin">
-                    <option value="Bangkok">Bangkok, Thailand</option>
-                    <option value="Chiangmai">Chiangmai, Thailand</option>
-                    <option value="Phuket">Phuket, Thailand</option>
-                    <option value="Tokyo">Tokyo, Japan</option>
-                </select>
-            </div>
-            <div class="item">
-                <p> To </p>
-                <select id="origin" name="origin">
-                    <option value="Bangkok">Bangkok, Thailand</option>
-                    <option value="Chiangmai">Chiangmai, Thailand</option>
-                    <option value="Phuket">Phuket, Thailand</option>
-                    <option value="Tokyo">Tokyo, Japan</option>
-                </select>
-            </div>
-            <div class="item">
-                <p> Departing </p>
-                <input type="date" id="departDate" name="departDate">
-           
-            </div>
-            <div class="item">
-                <p> Returning </p>
-                <input type="date" id="returnDate" name="returnDate">
-            </div>
-            
-        </div>
-
-        <div class="Container-4">
-            <div class="item">
-                <p>Adult</p>
-                <input type="number" id="Adult" name="Adult" min="1" max="10" value="1">
-            </div>
-            <div class="item">
-                <p>Child</p>
-                <input type="number" id="Child" name="Child" min="0" max="10" value="0">
-            </div>
-            <div class="item">
-                <p>Infant</p>
-                <input type="number" id="Infant" name="Infant" min="0" max="10" value="0">
-            </div>
-            <div class="item">
-                <p style="color: red;">Currency</p>
-                <select id="currency" name="currency" value="THB" >
+<form>
+<div>
+    <h2>Booking Flying</h2>
+    <table>
+        <tr>
+            <td colspan="2">Flying from</td>
+            <td colspan="2">To</td>
+        </tr>        
+        <tr>
+            <td colspan="2">
+                <form action="/origin_page.php">  <!--select/option element-->
+                    <label for="origin"></label>
+                    <select id="origin" name="origin">
+                      <option value="Karachi">Karachi, Pakistan</option>
+                      <option value="Bangkok">Bangkok, Thailand</option>
+                      <option value="Chiangmai">Chiangmai, Thailand</option>
+                      <option value="Phuket">Phuket, Thailand</option>
+                    </select>
+                  </form>
+            </td>
+            <td colspan="2">
+                <form action="/destination_page.php">
+                    <label for="destination"></label>
+                    <select id="destination" name="destination">
+                      <option value="Islamabad">Islamabad, Palestine</option>
+                      <option value="Bangkok">Bangkok, Thailand</option>
+                      <option value="Chiangmai">Chiangmai, Thailand</option>
+                      <option value="Phuket">Phuket, Thailand</option>
+                    </select>
+                  </form>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">Departing</td>
+            <td colspan="2">Returning</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="date" id="departDate" name="departDate"></td>
+            <td colspan="2"><input type="date" id="returnDate" name="returnDate"></td>
+        </tr>
+            <td>Adult</td>
+            <td>Child</td>
+            <td>Infant</td>
+            <td>Currency</td>
+        </tr>
+        <tr>
+            <td><input type="number" id="qtyAdult" name="qtyAdult" min="1" max="10" value="1"></td>
+            <td><input type="number" id="qtyChild" name="qtyChild" min="0" max="10" value="0"></td>
+            <td><input type="number" id="qtyInfant" name="qtyInfant" min="0" max="10" value="0"></td>
+            <td>
+                <select id="currency" name="currency" value="THB">
                     <option value:="THB">THB</option>
                     <option value:="USD">USD</option>
+                    <option value:="GBP">GBP</option>
                     <option value:="EUR">EUR</option>
+                    <option value:="CNY">CNY</option>
                     <option value:="JPY">JPY</option>
-                </select> 
-            </div>
-        </div>
-
-        <button class="button">SEARCH</button>
-    </from>
+                    <option value:="SGD">SGD</option>
+                    <option value:="HKD">HKD</option>
+                </select>    
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4"> <button class="button">SEARCH</button></td>
+        </tr>
+    </table>
 </div>
+</form>
+    
 </body>
 </html>
