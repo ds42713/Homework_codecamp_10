@@ -1,0 +1,1 @@
+select count(sid) from sailors
